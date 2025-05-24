@@ -60,6 +60,23 @@ AWS_ACCESS_KEY=<CHAVE AQUI>
 AWS_SECRET_KEY=<CHAVE SECRETA AQUI>
 ```
 
+## **Dependências diretas do projeto:**
+(Não estão sendo listadas aquelas utilizadas pelo Google Colab no Notebook da Fase 6 e que são transitivas)
+- streamlit
+- pandas
+- plotly
+- oracledb
+- requests
+- boto3
+- numpy
+- torch
+- torchvision
+- opencv-python (cv2)
+- pillow (PIL)
+- matplotlib
+- seaborn
+- PyYAML (yaml)
+
 ## 📁 Estrutura de pastas
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
