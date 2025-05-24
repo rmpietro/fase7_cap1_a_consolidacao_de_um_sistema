@@ -36,12 +36,14 @@ Foi criado um dashboard unificado para expor via interface web, usando streamlit
 
 Cada um dos programas e entregáveis está estruturado em uma página individualizada com um submenu próprio para acessar cada uma das funcionalidades.
 
-Nos programas em que se exige conexão com Banco de Dados, um formulário para preenchimento de usuário e senha do BANCO DE DADOS ORACLE DA FIAP, será apresentado, sem o qual não será possível prosseguir.
+Nos programas em que se exige conexão com Banco de Dados, um formulário para preenchimento de **usuário e senha do BANCO DE DADOS ORACLE DA FIAP**, será apresentado, sem o qual não será possível prosseguir.
 A aplicação criará automaticamente as entidades e DER no Banco de Dados para então importar os dados nesse modelo e então as funcionalidades estarem disponíveis.
 
 As credenciais do Banco de Dados acabm sendo gravadas em um arquivo txt na estrutura da pasta do programa para posterior uso no mesmo programa.
 
-#### Link para o vídeo de apresentação do projeto: <a href="">Video não listado no Youtube</a>
+**IMPORTANTE**: A página da Fase 7 implementa e executa corretamente o código criado para o treinamento das imagens, validação e todos os passos entregues, porém feitos no Google Colab. Pode demorar de 30 até 60 minutos (ou mais) para executá-los localmente, mas é possível. As imagens e demais arquivos utilizados estão na estrutura de pastas abaixo de /src/fase6 e por esse motivo o download ou clonagem do repositório pode demorar uns 2 min. Recomendamos executar pelo Google Colab no link já passado ou utilizando as pastas e importando o .ipynb constante dessa mesma estrutura de pastas.
+
+#### Link para o vídeo de apresentação do projeto: <a href="https://www.youtube.com/watch?v=IPauWJaBCb8">Video não listado no Youtube</a>
 
 ---
 
@@ -49,7 +51,15 @@ As credenciais do Banco de Dados acabm sendo gravadas em um arquivo txt na estru
 
 Foi implementada integração com o AWS SNS para envio de mensagens por email para cada nova leitura de sensor sendo realizada no programa entregue na FASE 3. Da mesma forma, uma página para cadastro de assinatura de email e envio de mensagem aberta a todos os subscritos foi colocada para teste.
 
-**OBS.: As credencias da conta utilizada na AWS para esse envio está no código e as credenciais serão desativadas tão pronto a avaliação do projeto esteja realizada.**
+**OBS.: As credencias da conta utilizada na AWS para esse envio precisam estar em um arquivo .env que deve ser criado na raiz do projeto. Essas chaves serão passadas no mesmo arquivo e em um txt que estarão no upload da área de entrega da atividade no portal on.fiap.com.**
+
+## **Abaixo um exemplo desse arquivo .env:**
+
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY=<CHAVE AQUI>
+AWS_SECRET_KEY=<CHAVE SECRETA AQUI>
+
+---
 
 ## 📁 Estrutura de pastas
 
@@ -60,11 +70,13 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 - <b>document</b>: não utilizada nesse projeto
 - <b>scripts</b>: não utilizada nesse projeto
 - <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto.
+- <b>src/faseX</b>: Pastas que contém o código de cada um dos projetos sendo exibidos em cada uma das páginas do Dashboard.
+- <b>src/dashboard</b>: Código do Dashboard. Engloba a página inicial e cada uma das páginas sendo exibidas em arquivos distintos
 - <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
 ## 🗃 Histórico de lançamentos
 
-- 0.1.0 - 17/03/2025
+- 0.1.0 - 23/05/2025
 
 ## 📋 Licença
 
