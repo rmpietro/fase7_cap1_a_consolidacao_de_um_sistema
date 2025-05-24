@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://127.0.0.1:8080/ -->
+<sql>
+    <datatypes db="oracle">
+        <group label="Number" color="rgb(238,238,170)">
+            <type label="INTEGER" length="0" sql="INTEGER" re="INT" quote="" />
+            <type label="NUMBER" length="1" sql="NUMBER" re="INT" quote="" />
+        </group>
+
+        <group label="Character" color="rgb(255,200,200)">
+            <type label="CHAR" length="1" sql="CHAR" quote="'" />
+            <type label="VARCHAR2" length="1" sql="VARCHAR2" quote="'" />
+            <type label="CLOB" length="0" sql="CLOB" re="TEXT" quote="'" />
+            <type label="NCHAR" length="1" sql="NCHAR" quote="'" />
+            <type label="NVARCHAR2" length="1" sql="NVARCHAR2" quote="'" />
+            <type label="NCLOB" length="0" sql="NCLOB" re="TEXT" quote="'" />
+        </group>
+
+        <group label="Date &amp; Time" color="rgb(200,255,200)">
+            <type label="DATE" length="0" sql="DATE" quote="" />
+            <type label="TIMESTAMP" length="1" sql="TIMESTAMP" quote="" />
+        </group>
+
+        <group label="Other" color="rgb(200,200,255)">
+            <type label="RAW" length="1" sql="RAW" quote="'" />
+            <type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'" />
+            <type label="DECIMAL" length="1" sql="DECIMAL" re="DEC" quote="" />
+            <type label="FLOAT" length="1" sql="FLOAT" quote="" />
+            <type label="DOUBLE" length="0" sql="DOUBLE PRECISION" quote="" />
+        </group>
+    </datatypes>
+    <table x="341" y="313" name="AREA_CULTIVO">
+        <row name="id_area" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="area_extensao" null="0" autoincrement="0">
+            <datatype>NUMBER(15)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="end_localizacao" null="1" autoincrement="0">
+            <datatype>VARCHAR2(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="id_cultura" null="1" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <default>NULL</default>
+            <relation table="TIPO_CULTURA" row="id_cultura" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_area</part>
+        </key>
+        <key type="INDEX" name="">
+        </key>
+        <comment>Armazena e gera as áreas de plantio para cada cultura de forma a localizar os
+            sensores atuantes, recomendações e previsões de aplicação de água e nutrientes.</comment>
+    </table>
+    <table x="652" y="30" name="PREVISAO_AJUSTE">
+        <row name="id_previsao" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+        </row>
+        <row name="data_ajuste" null="0" autoincrement="0">
+            <datatype>DATE</datatype>
+        </row>
+        <row name="acao_recomendada" null="0" autoincrement="0">
+            <datatype>VARCHAR2(255)</datatype>
+        </row>
+        <row name="quantidade" null="0" autoincrement="0">
+            <datatype>NUMBER(10,2)</datatype>
+        </row>
+        <row name="unidade_qtd" null="0" autoincrement="0">
+            <datatype>CHAR(10)</datatype>
+        </row>
+        <row name="id_area" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <relation table="AREA_CULTIVO" row="id_area" />
+        </row>
+        <row name="id_insumo" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <relation table="TIPO_INSUMO" row="id_insumo" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_previsao</part>
+        </key>
+        <comment>Registra previsões e ajustes para aplicação de insumos em áreas específicas. Essas
+            previsões podem ser aplicações de insumos imediatos ou para uma data futura.</comment>
+    </table>
+    <table x="987" y="313" name="TIPO_INSUMO">
+        <row name="id_insumo" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+        </row>
+        <row name="nome" null="0" autoincrement="0">
+            <datatype>VARCHAR2(100)</datatype>
+        </row>
+        <row name="descricao" null="1" autoincrement="0">
+            <datatype>VARCHAR2(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_insumo</part>
+        </key>
+        <comment>Lista os diferentes tipos de insumos utilizados no cultivo e que são alvo de
+            recomendações e previsões para ajustes nas diferentes culturas.</comment>
+    </table>
+    <table x="651" y="266" name="REG_APLICACAO_INSUMO">
+        <row name="id_aplic_insumo" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+        </row>
+        <row name="data_aplicacao" null="0" autoincrement="0">
+            <datatype>DATE</datatype>
+        </row>
+        <row name="quantidade" null="0" autoincrement="0">
+            <datatype>NUMBER(10,2)</datatype>
+        </row>
+        <row name="unidade_qtd" null="0" autoincrement="0">
+            <datatype>CHAR(10)</datatype>
+        </row>
+        <row name="id_area" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <default>NULL</default>
+            <relation table="AREA_CULTIVO" row="id_area" />
+        </row>
+        <row name="id_insumo" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <relation table="TIPO_INSUMO" row="id_insumo" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_aplic_insumo</part>
+        </key>
+        <comment>Registra as aplicações efetivas de insumos nas áreas de cultivo.</comment>
+    </table>
+    <table x="651" y="481" name="REG_LEITURA_SENSOR">
+        <row name="id_leitura" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+        </row>
+        <row name="data_leitura" null="0" autoincrement="0">
+            <datatype>DATE</datatype>
+        </row>
+        <row name="valor_leitura" null="0" autoincrement="0">
+            <datatype>NUMBER(10,5)</datatype>
+        </row>
+        <row name="unidade_leitura" null="0" autoincrement="0">
+            <datatype>CHAR(10)</datatype>
+        </row>
+        <row name="id_area" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <default>NULL</default>
+            <relation table="AREA_CULTIVO" row="id_area" />
+        </row>
+        <row name="id_sensor" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <relation table="SENSOR" row="id_sensor" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_leitura</part>
+        </key>
+        <comment>Armazena as leituras realizadas pelos sensores nas áreas de cultivo.</comment>
+    </table>
+    <table x="652" y="697" name="SENSOR">
+        <row name="id_sensor" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+        </row>
+        <row name="descricao" null="1" autoincrement="0">
+            <datatype>VARCHAR2(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="tipo" null="0" autoincrement="0">
+            <datatype>VARCHAR2(50)</datatype>
+        </row>
+        <row name="modelo" null="1" autoincrement="0">
+            <datatype>VARCHAR2(100)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="id_area" null="0" autoincrement="0">
+            <datatype>NUMBER(5)</datatype>
+            <default>NULL</default>
+            <relation table="AREA_CULTIVO" row="id_area" />
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_sensor</part>
+        </key>
+        <comment>Contém informações sobre os sensores utilizados para monitoramento das áreas de
+            cultivo.</comment>
+    </table>
+    <table x="105" y="325" name="TIPO_CULTURA">
+        <row name="id_cultura" null="0" autoincrement="1">
+            <datatype>NUMBER(5)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="nome" null="0" autoincrement="0">
+            <datatype>VARCHAR2(100)</datatype>
+            <default>'NULL'</default>
+        </row>
+        <row name="data_plantio" null="0" autoincrement="0">
+            <datatype>DATE</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id_cultura</part>
+        </key>
+        <comment>Gerencia a lista de culturas plantadas que será associada 'a área de cultivo e seus
+            sensores.</comment>
+    </table>
+</sql>

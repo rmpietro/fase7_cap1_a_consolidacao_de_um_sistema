@@ -1,0 +1,8 @@
+train: Z:\zdev\FIAP\fase7_project\fase6/images/train/
+val: Z:\zdev\FIAP\fase7_project\fase6/images/val/
+test: Z:\zdev\FIAP\fase7_project\fase6/test/
+
+names: # Defina aqui as labels do seu dataset
+  0: "COPO"
+  1: "GLOBO DE NEVE"
+  # ...

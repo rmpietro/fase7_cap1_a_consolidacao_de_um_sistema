@@ -1,0 +1,499 @@
+{
+  "tipo_cultura": [
+    {
+      "id_cultura": 1,
+      "nome": "Soja",
+      "data_plantio": "2024-03-15"
+    },
+    {
+      "id_cultura": 2,
+      "nome": "Milho",
+      "data_plantio": "2024-02-20"
+    }
+  ],
+  "area_cultivo": [
+    {
+      "id_area": 1,
+      "id_cultura": 1,
+      "area_extensao": 150.50,
+      "end_localizacao": "Setor A - Fazenda Sao Joao"
+    },
+    {
+      "id_area": 2,
+      "id_cultura": 2,
+      "area_extensao": 200.75,
+      "end_localizacao": "Setor B - Fazenda Sao Joao"
+    }
+  ],
+  "sensor": [
+    {
+      "id_sensor": 1,
+      "id_area": 1,
+      "descricao": "Sensor de umidade do solo",
+      "tipo": "Umidade",
+      "modelo": "DHT22"
+    },
+    {
+      "id_sensor": 2,
+      "id_area": 1,
+      "descricao": "Sensor de temperatura",
+      "tipo": "Temperatura",
+      "modelo": "DHT22"
+    },
+    {
+      "id_sensor": 3,
+      "id_area": 1,
+      "descricao": "Sensor de nutriente P",
+      "tipo": "Sensor P",
+      "modelo": "Sensor P"
+    },
+    {
+      "id_sensor": 4,
+      "id_area": 1,
+      "descricao": "Sensor de nutriente K",
+      "tipo": "Sensor K",
+      "modelo": "Sensor K"
+    },
+    {
+      "id_sensor": 5,
+      "id_area": 1,
+      "descricao": "Sensor de pH do solo",
+      "tipo": "Sensor pH",
+      "modelo": "LDR Adaptado"
+    }
+  ],
+  "leituras": [
+    {
+      "timestamp": "2024-12-01T00:00:00",
+      "temp": 23.45,
+      "hum": 52.3,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.8,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo seco, pouca humidade."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T02:30:00",
+      "temp": 31.20,
+      "hum": 58.7,
+      "P": "presente",
+      "K": "não-presente",
+      "pH": 7.2,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo úmido com temperatura alta."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T05:00:00",
+      "temp": 28.15,
+      "hum": 63.4,
+      "P": "presente",
+      "K": "presente",
+      "pH": 8.9,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T07:30:00",
+      "temp": 15.80,
+      "hum": 61.2,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.2,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T10:00:00",
+      "temp": 33.90,
+      "hum": 59.1,
+      "P": "não-presente",
+      "K": "presente",
+      "pH": 7.8,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo úmido com temperatura alta."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T12:30:00",
+      "temp": 12.35,
+      "hum": 49.8,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.5,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo seco, pouca humidade."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T15:00:00",
+      "temp": 29.75,
+      "hum": 57.3,
+      "P": "não-presente",
+      "K": "não-presente",
+      "pH": 9.1,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T17:30:00",
+      "temp": 18.60,
+      "hum": 64.5,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.1,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T20:00:00",
+      "temp": 25.90,
+      "hum": 53.8,
+      "P": "presente",
+      "K": "presente",
+      "pH": 7.4,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo seco, pouca humidade."
+      }
+    },
+    {
+      "timestamp": "2024-12-01T22:30:00",
+      "temp": 32.45,
+      "hum": 56.2,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.9,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo úmido com temperatura alta."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T01:00:00",
+      "temp": 16.75,
+      "hum": 62.7,
+      "P": "presente",
+      "K": "presente",
+      "pH": 8.2,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T03:30:00",
+      "temp": 21.30,
+      "hum": 58.9,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.3,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T06:00:00",
+      "temp": 33.15,
+      "hum": 51.4,
+      "P": "não-presente",
+      "K": "não-presente",
+      "pH": 8.7,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T08:30:00",
+      "temp": 19.85,
+      "hum": 60.3,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.7,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T11:00:00",
+      "temp": 27.60,
+      "hum": 54.6,
+      "P": "presente",
+      "K": "não-presente",
+      "pH": 7.9,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T13:30:00",
+      "temp": 14.25,
+      "hum": 63.8,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.4,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T16:00:00",
+      "temp": 30.95,
+      "hum": 55.7,
+      "P": "não-presente",
+      "K": "presente",
+      "pH": 8.5,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T18:30:00",
+      "temp": 22.50,
+      "hum": 59.4,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.6,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T21:00:00",
+      "temp": 33.70,
+      "hum": 52.9,
+      "P": "presente",
+      "K": "presente",
+      "pH": 7.6,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-02T23:30:00",
+      "temp": 17.40,
+      "hum": 61.6,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.0,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T02:00:00",
+      "temp": 26.85,
+      "hum": 56.8,
+      "P": "não-presente",
+      "K": "não-presente",
+      "pH": 9.3,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T04:30:00",
+      "temp": 20.15,
+      "hum": 64.2,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.8,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T07:00:00",
+      "temp": 32.80,
+      "hum": 50.5,
+      "P": "presente",
+      "K": "não-presente",
+      "pH": 7.3,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo seco, pouca humidade."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T09:30:00",
+      "temp": 15.55,
+      "hum": 58.1,
+      "P": "presente",
+      "K": "presente",
+      "pH": 8.8,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T12:00:00",
+      "temp": 28.90,
+      "hum": 62.3,
+      "P": "não-presente",
+      "K": "presente",
+      "pH": 6.2,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T14:30:00",
+      "temp": 24.20,
+      "hum": 55.9,
+      "P": "presente",
+      "K": "presente",
+      "pH": 7.7,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T17:00:00",
+      "temp": 33.35,
+      "hum": 51.7,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.5,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo seco, pouca humidade."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T19:30:00",
+      "temp": 18.95,
+      "hum": 60.8,
+      "P": "presente",
+      "K": "não-presente",
+      "pH": 9.0,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-03T22:00:00",
+      "temp": 27.10,
+      "hum": 57.6,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.9,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T00:30:00",
+      "temp": 13.80,
+      "hum": 63.1,
+      "P": "não-presente",
+      "K": "não-presente",
+      "pH": 8.1,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T03:00:00",
+      "temp": 31.65,
+      "hum": 54.2,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.7,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "Solo seco, pouca humidade."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T05:30:00",
+      "temp": 22.05,
+      "hum": 59.7,
+      "P": "presente",
+      "K": "presente",
+      "pH": 7.5,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T08:00:00",
+      "temp": 33.50,
+      "hum": 52.1,
+      "P": "presente",
+      "K": "não-presente",
+      "pH": 8.6,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T10:30:00",
+      "temp": 16.30,
+      "hum": 61.9,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.3,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T13:00:00",
+      "temp": 29.45,
+      "hum": 56.4,
+      "P": "não-presente",
+      "K": "presente",
+      "pH": 9.2,
+      "irrigacao": {
+        "estado": "ligada",
+        "motivo": "pH básico e nutrientes ausentes no solo."
+      }
+    },
+    {
+      "timestamp": "2024-12-04T15:30:00",
+      "temp": 19.40,
+      "hum": 64.8,
+      "P": "presente",
+      "K": "presente",
+      "pH": 6.8,
+      "irrigacao": {
+        "estado": "desligada",
+        "motivo": "Solo suficientemente úmido com nutrientes e temperatura adequada."
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "ID": 1,
+        "NOME_PRODUTO": "Milho",
+        "TIPO_PRODUTO": 1,
+        "QUANTIDADE": 20.0,
+        "SILO_NOME": "Geral1",
+        "ENDERECO": "Rua 4",
+        "CAPACIDADE": 25.0,
+        "DATA_HORA_REGISTRO": "2025-05-20T23:28:54",
+        "UMIDADE": 13.5,
+        "TEMPERATURA": 18.0,
+        "PH": 7.5,
+        "OBSERVACOES": "Tudo OK com o transporte e armazenamento dos gr\u00e3os"
+    }
+]

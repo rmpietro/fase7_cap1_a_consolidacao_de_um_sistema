@@ -1,0 +1,11 @@
+Relatório dos silos: 
+
+    * Listagem de silos:
+   id nome_produto  tipo_produto  quantidade silo_nome endereco  capacidade  data_hora_registro  umidade  temperatura   ph                                         observacoes
+0   1        Milho             1        20.0    Geral1    Rua 4        25.0 2025-05-20 23:28:54     13.5         18.0  7.5  Tudo OK com o transporte e armazenamento dos grãos
+
+    * Valor total em mercadorias: R$28819.4
+
+    * Silos com umidade inadequada:
+    * Silos com temperatura inadequada:
+    * Silos com pH inadequado:

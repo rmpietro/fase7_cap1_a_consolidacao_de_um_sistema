@@ -1,0 +1,165 @@
+{
+  "tipo_cultura": [
+    {
+      "id_cultura": 1,
+      "nome": "Soja",
+      "data_plantio": "2024-03-15"
+    },
+    {
+      "id_cultura": 2,
+      "nome": "Milho",
+      "data_plantio": "2024-02-20"
+    }
+  ],
+  "area_cultivo": [
+    {
+      "id_area": 1,
+      "id_cultura": 1,
+      "area_extensao": 150.50,
+      "end_localizacao": "Setor A - Fazenda Sao Joao"
+    },
+    {
+      "id_area": 2,
+      "id_cultura": 2,
+      "area_extensao": 200.75,
+      "end_localizacao": "Setor B - Fazenda Sao Joao"
+    }
+  ],
+  "sensor": [
+    {
+      "id_sensor": 1,
+      "id_area": 1,
+      "descricao": "Sensor de umidade do solo",
+      "tipo": "Umidade",
+      "modelo": "DHT22"
+    },
+    {
+      "id_sensor": 2,
+      "id_area": 1,
+      "descricao": "Sensor de temperatura",
+      "tipo": "Temperatura",
+      "modelo": "DHT22"
+    },
+    {
+      "id_sensor": 3,
+      "id_area": 1,
+      "descricao": "Sensor de nutriente P",
+      "tipo": "Sensor P",
+      "modelo": "Sensor P"
+    },
+    {
+      "id_sensor": 4,
+      "id_area": 1,
+      "descricao": "Sensor de nutriente K",
+      "tipo": "Sensor K",
+      "modelo": "Sensor K"
+    },
+    {
+      "id_sensor": 5,
+      "id_area": 1,
+      "descricao": "Sensor de pH do solo",
+      "tipo": "Sensor pH",
+      "modelo": "LDR Adaptado"
+    }
+  ],
+  "leituras": [
+    [
+      {
+        "timestamp": "2024-11-12T10:30:00",
+        "temp": 28.40,
+        "humid": 60.0,
+        "P": "presente",
+        "K": "presente",
+        "pH": 6.76,
+        "irrigacao": {
+          "estado": "desligada",
+          "motivo": "Solo suficientemente umido com nutrientes e temperatura adequada."
+        }
+      },
+      {
+        "timestamp": "2024-11-12T10:00:00",
+        "temp": 29.50,
+        "humid": 62.0,
+        "P": "presente",
+        "K": "presente",
+        "pH": 7,
+        "irrigacao": {
+          "estado": "desligada",
+          "motivo": "Solo suficientemente umido com nutrientes e temperatura adequada."
+        }
+      },
+      {
+        "timestamp": "2024-11-11T10:00:00",
+        "temp": 37.20,
+        "humid": 59.5,
+        "P": "presente",
+        "K": "presente",
+        "pH": 6.76,
+        "irrigacao": {
+          "estado": "ligada",
+          "motivo": "Solo umido com temperatura alta."
+        }
+      },
+      {
+        "timestamp": "2024-11-10T10:00:00",
+        "temp": 36.50,
+        "humid": 57.5,
+        "P": "presente",
+        "K": "presente",
+        "pH": 6.9,
+        "irrigacao": {
+          "estado": "ligada",
+          "motivo": "Solo umido com temperatura alta."
+        }
+      },
+      {
+        "timestamp": "2024-10-30T09:30:00",
+        "temp": 28.10,
+        "humid": 51.5,
+        "P": "presente",
+        "K": "presente",
+        "pH": 6.8,
+        "irrigacao": {
+          "estado": "ligada",
+          "motivo": "Solo seco, pouca humidade."
+        }
+      },
+      {
+        "timestamp": "2024-10-30T09:00:00",
+        "temp": 28.10,
+        "humid": 49.9,
+        "P": "presente",
+        "K": "presente",
+        "pH": 6.96,
+        "irrigacao": {
+          "estado": "ligada",
+          "motivo": "Solo seco, pouca humidade."
+        }
+      },
+      {
+        "timestamp": "2024-10-29T08:00:00",
+        "temp": 30.00,
+        "humid": 60.0,
+        "P": "presente",
+        "K": "nao-presente",
+        "pH": 7.78,
+        "irrigacao": {
+          "estado": "ligada",
+          "motivo": "pH basico e nutrientes ausentes no solo."
+        }
+      },
+      {
+        "timestamp": "2024-10-29T08:15:00",
+        "temp": 30.50,
+        "humid": 61.5,
+        "P": "nao-presente",
+        "K": "nao-presente",
+        "pH": 7.98,
+        "irrigacao": {
+          "estado": "ligada",
+          "motivo": "pH basico e nutrientes ausentes no solo."
+        }
+      }
+    ]
+  ]
+}
