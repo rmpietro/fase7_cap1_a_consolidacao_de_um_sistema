@@ -54,12 +54,11 @@ Foi implementada integração com o AWS SNS para envio de mensagens por email pa
 **OBS.: As credencias da conta utilizada na AWS para esse envio precisam estar em um arquivo .env que deve ser criado na raiz do projeto. Essas chaves serão passadas no mesmo arquivo e em um txt que estarão no upload da área de entrega da atividade no portal on.fiap.com.**
 
 ## **Abaixo um exemplo desse arquivo .env:**
-
+```
 AWS_REGION=us-east-1
 AWS_ACCESS_KEY=<CHAVE AQUI>
 AWS_SECRET_KEY=<CHAVE SECRETA AQUI>
-
----
+```
 
 ## 📁 Estrutura de pastas
 
